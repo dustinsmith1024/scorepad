@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110911174759) do
+ActiveRecord::Schema.define(:version => 20110917203445) do
 
   create_table "games", :force => true do |t|
     t.integer  "user_id"
@@ -38,6 +38,11 @@ ActiveRecord::Schema.define(:version => 20110911174759) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "phone_id"
+    t.string   "guid"
+    t.string   "device_name"
+    t.string   "device_platform"
+    t.string   "device_version"
   end
 
 end

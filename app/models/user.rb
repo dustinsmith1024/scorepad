@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :facebook_id
+  attr_accessible :email, :facebook_id, :phone_id, :guid, :device_name, :device_platform, :device_version
   has_many :games, :dependent => :destroy
   validates_uniqueness_of :email
 

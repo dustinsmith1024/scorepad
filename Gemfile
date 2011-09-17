@@ -6,7 +6,7 @@ group :production do
   gem 'pg'
 end
 group :development, :test do
-  gem 'mysql2'
+  gem 'mysql2', '0.3.7'
 end
 gem 'json'
 
