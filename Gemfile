@@ -2,7 +2,12 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
 gem 'pubnub-ruby'
-gem 'mysql2'
+group :production do
+  gem 'pg'
+end
+group :development, :test do
+  gem 'mysql2'
+end
 gem 'json'
 
 # Gems used only for assets and not required

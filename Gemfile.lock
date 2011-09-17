@@ -55,7 +55,8 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     multi_json (1.0.3)
-    mysql2 (0.3.7)
+    mysql2 (0.2.8)
+    pg (0.11.0)
     polyglot (0.3.2)
     pubnub-ruby (0.0.5)
       json
@@ -112,6 +113,7 @@ DEPENDENCIES
   jquery-rails
   json
   mysql2
+  pg
   pubnub-ruby
   rails (= 3.1.0)
   sass-rails (~> 3.1.0)
