@@ -7,6 +7,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @users }
+      format.jsonp { render :json => @users, :callback => params[:callback] }
     end
   end
 
