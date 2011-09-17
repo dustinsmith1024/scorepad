@@ -1,0 +1,25 @@
+<h1>Listing games</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @games.each do |game| %>
+  <tr>
+    <td><%= game.user.email %></td>
+    <td><%= game.type_of %></td>
+    <td><%= link_to 'Show', user_game_path(@user, game) %></td>
+    <td><%= link_to 'Edit', edit_user_game_path(@user, game) %></td>
+    <td><%= link_to 'Destroy', user_game_path(@user, game), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Create New Game', new_user_game_path(@user) %>

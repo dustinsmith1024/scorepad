@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scorepad</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%#= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+  <%= javascript_include_tag "application", "http://maccman.github.com/spine/spine.min.js" %>
+  <div pub-key="pub-c82313ac-0539-4360-a94a-ca61815162e1" sub-key="sub-8f210f63-de68-11e0-87ea-fd1c1c3f5d78" ssl="off" origin="pubsub.pubnub.com" id="pubnub"></div>
+  <script src="http://cdn.pubnub.com/pubnub-3.1.min.js"></script>
+
+<%= yield :js %>
+
+</body>
+</html>

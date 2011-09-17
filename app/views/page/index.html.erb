@@ -1,0 +1,29 @@
+<h1>Sup?</h1>
+
+
+<% content_for :js do %>
+<script>
+  (function(){
+    // LISTEN FOR MESSAGES
+    PUBNUB.subscribe({
+        channel  : "hello_world",      // CONNECT TO THIS CHANNEL.
+        error    : function() {        // LOST CONNECTION (auto reconnects)
+            alert("Connection Lost. Will auto-reconnect when Online.")
+        },
+        callback : function(message) { // RECEIVED A MESSAGE.
+            alert(message)
+        },
+        connect  : function() {        // CONNECTION ESTABLISHED.
+
+            // SEND MESSAGE
+            //PUBNUB.publish({
+            //    channel : "hello_world",
+            //    message : "Hi from PubNub."
+            //})
+
+        }
+    })
+
+  })();
+</script>
+<% end %>

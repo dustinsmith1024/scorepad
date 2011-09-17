@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @game.user.email %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @game.type_of %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_game_path(@user,@game) %> |
+<%= link_to 'Back', user_games_path(@user) %>
